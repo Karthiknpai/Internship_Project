@@ -1,0 +1,298 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Home Page Container */
+.home-container {
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  background: url("assets/PhotoshopPreview_Image.png") no-repeat center center;
+  background-size: cover;
+  margin-top: 70px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin: 0;
+  color: white;
+  max-width: 700px;
+}
+
+/* Tablets (iPad Mini, iPad Pro, Surface Pro 7, etc.) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    height: 40vh;
+    padding: 70px 30px;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+  }
+}
+
+/* Smaller tablets and phones - already working fine */
+@media (max-width: 767px) {
+  .hero {
+    height: auto;
+    padding: 50px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+  }
+}
+
+.btn-primary {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Search Section */
+.search-section {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+}
+
+.search-bar {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Vehicle Listings */
+.home-available-vehicles {
+  width: 100%;
+  text-align: center; /* ✅ Ensure text is centered */
+  display: flex;
+  flex-direction: column; /* ✅ Stack items vertically */
+  align-items: center; /* ✅ Center the items */
+  justify-content: center;
+  position: relative;
+  top: -30px;
+  /* margin-bottom: -40px; */
+}
+
+.home-available-vehicles .vehicle-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  /* position: relative;
+    z-index: 1; */
+  /* padding: 10px; Reduce padding to bring it up */
+  /* margin-top: -30px; */
+  padding: 40px;
+}
+
+.home-available-vehicles .vehicle-card {
+  width: 250px; /* Reduce width */
+  padding: 10px; /* Reduce padding */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content: center;
+  /* position: relative; */
+  transition: transform 0.1s ease-in-out;
+}
+
+.vehicle-card:hover {
+  transform: scale(1.05);
+}
+
+/* Reduce Image Size */
+.vehicle-image {
+  width: 100%;
+  height: 65px; /* Reduce height */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.vehicle-card h4 {
+  font-size: 15px; /* Smaller text */
+  margin: 5px 0;
+}
+
+.vehicle-card p {
+  font-size: 12px; /* Reduce text size */
+  margin: 2px 0;
+}
+
+.rent-price {
+  font-size: 15px; /* Smaller price text */
+}
+
+.btn-group {
+  gap: 5px; /* Reduce button spacing */
+}
+
+.rent-btn,
+.details-btn {
+  padding: 3px; /* Reduce button size */
+  font-size: 10px; /* Smaller button text */
+}
+
+.rent-btn {
+  background: #ff6600;
+}
+
+.details-btn {
+  background: #333;
+}
+
+.rent-btn:hover {
+  background: #e65c00;
+}
+
+.details-btn:hover {
+  background: #222;
+}
+
+.how-it-works {
+  /* background-color: #f2f8fc; */
+  padding: 0px 0px 60px 0px;
+  /* max-width: 1200px;
+  margin: 0 auto; */
+  margin-bottom: 20px;
+}
+
+.how-title {
+  font-size: 2rem;
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #0a0a0a;
+}
+
+.how-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.how-column {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.column-title {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #111;
+  text-align: left;
+}
+
+.how-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+/* .icon-box {
+  width: 45px;
+  height: 45px;
+  background-color: #007bff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.how-icon {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.how-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.how-text h4,
+.how-text p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.how-text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.how-text p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  margin-top: -50px;
+}
