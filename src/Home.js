@@ -70,13 +70,22 @@ export default function Home() {
       <div className="hero">
         <h1>Rent Your Perfect Ride</h1>
         <p>Find the best cars & bikes for rent at affordable prices.</p>
-        {/* <button className="btn-primary">Explore Vehicles</button> */}
+        <div className="search-bar-wrapper">
+          <input type="text" placeholder="Location" />
+          <select>
+            <option value="">Select Vehicle Type</option>
+            <option value="Car">Car</option>
+            <option value="Bike">Bike</option>
+          </select>
+          <button className="search-button">Search</button>
+        </div>
       </div>
 
       {/* Available Vehicles Section */}
       <div className="home-available-vehicles">
         {/* <h2>Vehicles Available for Rentals</h2> */}
         <div className="vehicle-grid">
+
           {vehicles.length > 0 ? (
             vehicles.map((vehicle, index) => (
               <div key={index} className="vehicle-card">
